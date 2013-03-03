@@ -1,0 +1,57 @@
+[submodule "cookbooks/users"]
+	path = cookbooks/users
+	url = git@github.com:opscode-cookbooks/users.git
+[submodule "cookbooks/chef-client"]
+	path = cookbooks/chef-client
+	url = git@github.com:opscode-cookbooks/chef-client.git
+[submodule "cookbooks/nginx"]
+	path = cookbooks/nginx
+	url = git@github.com:opscode-cookbooks/nginx.git
+[submodule "cookbooks/build-essential"]
+	path = cookbooks/build-essential
+	url = git@github.com:opscode-cookbooks/build-essential.git
+[submodule "cookbooks/sudo"]
+	path = cookbooks/sudo
+	url = git@github.com:opscode-cookbooks/sudo.git
+[submodule "cookbooks/chef-solo-search"]
+	path = cookbooks/chef-solo-search
+	url = git@github.com:edelight/chef-solo-search.git
+[submodule "cookbooks/apt"]
+	path = cookbooks/apt
+	url = git@github.com:opscode-cookbooks/apt.git
+[submodule "cookbooks/git"]
+	path = cookbooks/git
+	url = git@github.com:opscode-cookbooks/git.git
+[submodule "cookbooks/dmg"]
+	path = cookbooks/dmg
+	url = git@github.com:opscode-cookbooks/dmg.git
+[submodule "cookbooks/yum"]
+	path = cookbooks/yum
+	url = git@github.com:opscode-cookbooks/yum.git
+[submodule "cookbooks/runit"]
+	path = cookbooks/runit
+	url = git@github.com:opscode-cookbooks/runit.git
+[submodule "cookbooks/windows"]
+	path = cookbooks/windows
+	url = git@github.com:opscode-cookbooks/windows.git
+[submodule "cookbooks/chef_handler"]
+	path = cookbooks/chef_handler
+	url = git@github.com:opscode-cookbooks/chef_handler.git
+[submodule "cookbooks/ohai"]
+	path = cookbooks/ohai
+	url = git@github.com:opscode-cookbooks/ohai.git
+[submodule "cookbooks/chef_gem"]
+	path = cookbooks/chef_gem
+	url = git@github.com:hw-cookbooks/chef_gem.git
+[submodule "cookbooks/application"]
+	path = cookbooks/application
+	url = https://github.com/opscode-cookbooks/application.git
+[submodule "cookbooks/application_rest-tail"]
+	path = cookbooks/application_rest-tail
+	url = git@github.com:trotttrotttrott/cookbook-application_rest-tail.git
+[submodule "cookbooks/rbenv"]
+	path = cookbooks/rbenv
+	url = git@github.com:fnichol/chef-rbenv.git
+[submodule "cookbooks/ruby_build"]
+	path = cookbooks/ruby_build
+	url = git@github.com:fnichol/chef-ruby_build.git
