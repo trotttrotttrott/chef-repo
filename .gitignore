@@ -1,2 +1,7 @@
-.rake_test_cache
-
+.DS_STORE
+.rvmrc
+.chef/checksums
+.chef/*.pem
+.chef/encrypted_data_bag_secret
+.vagrant
+knife.rb
