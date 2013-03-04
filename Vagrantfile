@@ -64,57 +64,13 @@ Vagrant::Config.run do |config|
     EOF
   end
 
+  config.vm.define :rest_tail do |web_config|
 
-  config.vm.define :base do |base_config|
-
-    base_config.vm.forward_port 22, 1110
-    base_config.vm.forward_port 80, 3456
-
-    base_config.vm.network :hostonly, "10.11.12.12"
-  end
-
-  # Enable provisioning with chef solo, specifying a cookbooks path, roles
-  # path, and data_bags path (all relative to this Vagrantfile), and adding
-  # some recipes and/or roles.
-
-  # config.vm.provision :chef_solo do |chef|
-  #   chef.cookbooks_path = "../my-recipes/cookbooks"
-  #   chef.roles_path = "../my-recipes/roles"
-  #   chef.data_bags_path = "../my-recipes/data_bags"
-  #   chef.add_recipe "mysql"
-  #   chef.add_role "web"
-  #
-  #   # You may also specify custom JSON attributes:
-  #   chef.json = { :mysql_password => "foo" }
-  # end
-
-  config.vm.define :db do |db_config|
-
-    db_config.vm.forward_port 22, 2220
-
-    db_config.vm.network :hostonly, "10.11.12.13"
-
-    db_config.vm.provision :chef_solo do |chef|
-
-      chef.cookbooks_path = ["./cookbooks"]
-      chef.roles_path     = ["./roles"]
-      chef.data_bags_path = ["./data_bags"]
-
-      chef.encrypted_data_bag_secret_key_path = "./.chef/encrypted_data_bag_secret"
-
-      chef.log_level      = :debug
-
-      chef.add_role       "base"
-      chef.add_role       "db"
-    end
-  end
-
-  config.vm.define :web do |web_config|
-
-    web_config.vm.forward_port 22, 3330
+    web_config.vm.forward_port 22, 2220
     web_config.vm.forward_port 80, 4567
+    web_config.vm.forward_port 8080, 7654
 
-    web_config.vm.network :hostonly, "10.11.12.14"
+    web_config.vm.network :hostonly, "10.11.12.13"
 
     web_config.vm.provision :chef_solo do |chef|
 
@@ -124,10 +80,9 @@ Vagrant::Config.run do |config|
 
       chef.encrypted_data_bag_secret_key_path = "./.chef/encrypted_data_bag_secret"
 
-      chef.log_level      = :debug
+      chef.log_level = :debug
 
-      chef.add_role       "base"
-      chef.add_role       "web"
+      chef.add_role 'rest_tail'
     end
   end
 
