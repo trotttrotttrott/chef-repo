@@ -46,12 +46,12 @@
 [submodule "cookbooks/application"]
 	path = cookbooks/application
 	url = https://github.com/opscode-cookbooks/application.git
-[submodule "cookbooks/application_rest-tail"]
-	path = cookbooks/application_rest-tail
-	url = git@github.com:trotttrotttrott/cookbook-application_rest-tail.git
 [submodule "cookbooks/rbenv"]
 	path = cookbooks/rbenv
 	url = git@github.com:fnichol/chef-rbenv.git
 [submodule "cookbooks/ruby_build"]
 	path = cookbooks/ruby_build
 	url = git@github.com:fnichol/chef-ruby_build.git
+[submodule "cookbooks/application_node-tail"]
+	path = cookbooks/application_node-tail
+	url = git@github.com:trotttrotttrott/cookbook-application_node-tail.git

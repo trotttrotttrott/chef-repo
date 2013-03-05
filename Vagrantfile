@@ -64,7 +64,7 @@ Vagrant::Config.run do |config|
     EOF
   end
 
-  config.vm.define :rest_tail do |web_config|
+  config.vm.define :node_tail do |web_config|
 
     web_config.vm.forward_port 22, 2220
     web_config.vm.forward_port 80, 4567
@@ -82,7 +82,7 @@ Vagrant::Config.run do |config|
 
       chef.log_level = :debug
 
-      chef.add_role 'rest_tail'
+      chef.add_role 'node_tail'
     end
   end
 

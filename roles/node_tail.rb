@@ -1,12 +1,12 @@
-name 'rest_tail'
-description 'Nginx/Unicorn for rest-tail app'
+name 'node_tail'
+description 'Nginx/Unicorn for node-tail app'
 run_list(
   'recipe[apt]',
   'recipe[build-essential]',
   'recipe[ruby_build]',
   'recipe[rbenv::system]',
   'recipe[sudo]',
-  'recipe[application_rest-tail]'
+  'recipe[application_node-tail]'
 )
 
 default_attributes(
