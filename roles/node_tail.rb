@@ -6,7 +6,8 @@ run_list(
   'recipe[ruby_build]',
   'recipe[rbenv::system]',
   'recipe[sudo]',
-  'recipe[application_node-tail]'
+  'recipe[application_node-tail]',
+  'recipe[nginx]'
 )
 
 default_attributes(
