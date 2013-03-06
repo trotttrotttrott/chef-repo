@@ -55,3 +55,6 @@
 [submodule "cookbooks/application_node-tail"]
 	path = cookbooks/application_node-tail
 	url = git@github.com:trotttrotttrott/cookbook-application_node-tail.git
+[submodule "cookbooks/cron"]
+	path = cookbooks/cron
+	url = git@github.com:opscode-cookbooks/cron.git
