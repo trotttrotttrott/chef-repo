@@ -58,3 +58,6 @@
 [submodule "cookbooks/cron"]
 	path = cookbooks/cron
 	url = git@github.com:opscode-cookbooks/cron.git
+[submodule "cookbooks/ruby_shadow"]
+	path = cookbooks/ruby_shadow
+	url = git@github.com:trotttrotttrott/cookbook-ruby_shadow.git
