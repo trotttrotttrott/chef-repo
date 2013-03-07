@@ -5,6 +5,8 @@ run_list(
   'recipe[build-essential]',
   'recipe[ruby_build]',
   'recipe[rbenv::system]',
+  'recipe[ruby_shadow]', # needed for updating users::sysadmins
+  'recipe[users::sysadmins]',
   'recipe[sudo]',
   'recipe[application_node-tail]',
   'recipe[nginx]'
@@ -16,7 +18,7 @@ default_attributes(
   },
   :authorization => {
     :sudo => {
-      :groups => [],
+      :groups => ['sysadmin'],
       :users => ['trotttrotttrott', 'travis'],
       :passwordless => true
     }
